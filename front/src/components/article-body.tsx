@@ -15,11 +15,17 @@ export default function ArticleBody({ article }: { article: Article }) {
           />
         </div>
       )}
-      {article.body.map((paragraph, i) => (
-        <p key={i} className="text-sm leading-relaxed text-gray-700">
-          {paragraph}
-        </p>
-      ))}
+      {article.body.map((block, i) =>
+        block.startsWith('## ') ? (
+          <h3 key={i} className="text-base font-serif font-bold text-gray-900 pt-2">
+            {block.slice(3)}
+          </h3>
+        ) : (
+          <p key={i} className="text-sm leading-relaxed text-gray-700">
+            {block}
+          </p>
+        )
+      )}
       <p className="text-xs text-gray-400">
         Source:{' '}
         <a
