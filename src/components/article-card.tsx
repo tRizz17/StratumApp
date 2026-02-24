@@ -1,5 +1,4 @@
 
-
 import Image from 'next/image'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import type { Article } from '@/data/articles'
