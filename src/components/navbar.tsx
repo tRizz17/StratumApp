@@ -3,7 +3,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import { useFeedReset } from '@/lib/contexts/feed-reset-context'
 
 const navLinks = [
   { label: 'Markets', href: '#' },
@@ -46,10 +45,8 @@ function ProfileDropdown() {
 }
 
 function Masthead() {
-  const { reset } = useFeedReset()
-
   return (
-    <Link href={'/'} onClick={reset}>
+    <Link href={'/'}>
       <div className="text-center">
         <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-gray-900">
           Stratum

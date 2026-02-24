@@ -1,29 +1,25 @@
 
 import Image from 'next/image'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { ChevronUpIcon } from '@heroicons/react/20/solid'
 import type { Article } from '@/data/articles'
 import ArticleBody from '@/components/article-body'
 
-/** A single article card — expands on mobile, calls onSelect for desktop detail view */
+/** A single article card — expands inline on click */
 export default function ArticleCard({
   article,
   isHero = false,
-  hideImage = false,
-  onSelect,
 }: {
   article: Article
   isHero?: boolean
-  hideImage?: boolean
-  onSelect: (id: string) => void
 }) {
   return (
     <Disclosure as="article" className="border-b border-gray-200 pb-5">
       <DisclosureButton
         as="div"
         className="w-full cursor-pointer text-left"
-        onClick={() => onSelect(article.id)}
       >
-        {isHero && !hideImage && article.image && (
+        {isHero && article.image && (
           <div className="relative aspect-2/1 w-full overflow-hidden rounded">
             <Image
               src={article.image}
@@ -47,9 +43,14 @@ export default function ArticleCard({
         <p className="mt-1 text-sm leading-snug text-gray-600">{article.subtitle}</p>
       </DisclosureButton>
 
-      {/* Mobile-only accordion panel */}
-      <DisclosurePanel className="lg:hidden">
-        <ArticleBody article={article} />
+      <DisclosurePanel as="div">
+        <DisclosureButton as="div" className="cursor-pointer">
+          <ArticleBody article={article} />
+          <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-400">
+            <ChevronUpIcon className="size-4" />
+            <span>Minimize</span>
+          </div>
+        </DisclosureButton>
       </DisclosurePanel>
     </Disclosure>
   )
