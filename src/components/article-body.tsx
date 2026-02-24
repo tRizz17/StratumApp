@@ -20,6 +20,18 @@ export default function ArticleBody({ article }: { article: Article }) {
           {paragraph}
         </p>
       ))}
+      <p className="text-xs text-gray-400">
+        Source:{' '}
+        <a
+          href={article.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="underline hover:text-gray-600 transition-colors"
+        >
+          {article.source}
+        </a>
+      </p>
     </div>
   )
 }

@@ -30,17 +30,17 @@ export default function ArticleCard({
             />
           </div>
         )}
-        <time className={`${isHero ? 'mt-3' : ''} block text-xs text-gray-400`}>
-          {article.date}
-        </time>
         <h2
-          className={`mt-1 font-serif font-bold leading-tight text-gray-900 ${
+          className={`${isHero ? 'mt-3' : ''} font-serif font-bold leading-tight text-gray-900 ${
             isHero ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
           }`}
         >
           {article.title}
         </h2>
         <p className="mt-1 text-sm leading-snug text-gray-600">{article.subtitle}</p>
+        <time className="mt-1 block text-xs text-gray-400">
+          {article.date}
+        </time>
       </DisclosureButton>
 
       <DisclosurePanel as="div">

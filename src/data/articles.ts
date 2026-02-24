@@ -5,6 +5,8 @@ export type Article = {
   date: string
   body: string[]
   image?: string
+  source: string
+  sourceUrl: string
 }
 
 export const heroArticle: Article = {
@@ -18,6 +20,8 @@ export const heroArticle: Article = {
     'Chair Jerome Powell emphasized that the economy remains resilient, with a strong labor market and steady consumer spending providing little urgency to ease monetary policy. "We need to see more progress on inflation before adjusting our stance," Powell told lawmakers.',
     'Markets reacted swiftly, with Treasury yields climbing and equity futures dipping as investors recalibrated expectations for rate cuts in the first half of the year. Fed funds futures now price in fewer than two quarter-point reductions by year-end, down from four just weeks ago.',
   ],
+  source: 'Reuters',
+  sourceUrl: 'https://www.reuters.com',
 }
 
 export const articles: Article[] = [
@@ -32,6 +36,8 @@ export const articles: Article[] = [
       'Alphabet, Microsoft, and Amazon each disclosed billions of dollars in planned spending on data centers and specialized chips, raising questions about when these investments will translate into sustained profit growth.',
       'Analysts note that while cloud-based AI products are growing rapidly, the competitive landscape is intensifying as smaller players and open-source alternatives gain traction.',
     ],
+    source: 'Wall Street Journal',
+    sourceUrl: 'https://www.wsj.com',
   },
   {
     id: 'housing-market-cools-mortgage-rates',
@@ -43,6 +49,8 @@ export const articles: Article[] = [
       'Existing home sales fell for the third consecutive month, while new listings ticked up as some homeowners test the market before conditions deteriorate further. The median home price still sits well above pre-pandemic levels.',
       'Real estate economists expect a prolonged period of stagnation rather than a sharp correction, as limited inventory continues to put a floor under prices even as demand softens.',
     ],
+    source: 'Bloomberg',
+    sourceUrl: 'https://www.bloomberg.com',
   },
   {
     id: 'oil-prices-drop-global-demand',
@@ -54,6 +62,8 @@ export const articles: Article[] = [
       'OPEC+ members are reportedly considering extending production cuts to stabilize prices, but disagreements among member nations have complicated negotiations.',
       'Energy analysts warn that a prolonged period of lower oil prices could impact investment in new exploration and production, potentially setting the stage for supply shortages in future years.',
     ],
+    source: 'Financial Times',
+    sourceUrl: 'https://www.ft.com',
   },
   {
     id: 'retail-sales-disappoint-january',
@@ -65,6 +75,8 @@ export const articles: Article[] = [
       'The Commerce Department reported a 0.4% decrease in overall retail spending, with weakness concentrated in discretionary categories like electronics, furniture, and dining out.',
       'Economists point to rising household savings rates and tighter credit conditions as factors weighing on consumer confidence, though the labor market remains a bright spot.',
     ],
+    source: 'Associated Press',
+    sourceUrl: 'https://apnews.com',
   },
   {
     id: 'retail-sales-savings-rate-impact',
@@ -75,6 +87,8 @@ export const articles: Article[] = [
       'Consumer spending showed unexpected weakness in the latest retail sales report, with economists debating whether the dip represents a temporary pause or the start of a broader slowdown.',
       'The personal savings rate has climbed to its highest level in two years, suggesting households are becoming more cautious about discretionary spending amid economic uncertainty.',
     ],
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com',
   },
   {
     id: 'retail-sales-credit-conditions',
@@ -85,6 +99,8 @@ export const articles: Article[] = [
       'Tighter credit conditions are beginning to weigh on consumer spending, with credit card delinquencies rising and approval rates for new accounts declining.',
       'Retailers are responding by expanding promotional activity and loyalty programs, but foot traffic at major shopping centers remained below year-ago levels throughout January.',
     ],
+    source: 'Reuters',
+    sourceUrl: 'https://www.reuters.com',
   },
   {
     id: 'retail-sales-labor-market',
@@ -95,6 +111,8 @@ export const articles: Article[] = [
       'Despite the weak retail sales figures, the labor market continues to show resilience, with unemployment holding steady at 3.9% and initial jobless claims remaining near historic lows.',
       'Some economists argue the spending slowdown is a healthy normalization after years of pandemic-driven excess, rather than a signal of impending recession.',
     ],
+    source: 'Bloomberg',
+    sourceUrl: 'https://www.bloomberg.com',
   },
   {
     id: 'retail-sales-regional-trends',
@@ -105,6 +123,8 @@ export const articles: Article[] = [
       'Regional data shows significant variation in retail performance, with Sun Belt states continuing to outperform the Northeast and Midwest in both foot traffic and online sales.',
       'E-commerce sales held up better than brick-and-mortar retail, though growth rates have moderated from the double-digit pace seen during the pandemic years.',
     ],
+    source: 'Wall Street Journal',
+    sourceUrl: 'https://www.wsj.com',
   },
   {
     id: 'retail-sales-outlook',
@@ -115,5 +135,7 @@ export const articles: Article[] = [
       'Wall Street analysts are divided on the outlook for consumer spending, with some predicting a rebound in spring driven by seasonal hiring and tax refunds.',
       'Others warn that the combination of elevated interest rates, shrinking pandemic savings, and rising household debt could keep a lid on discretionary spending through the first half of the year.',
     ],
+    source: 'Financial Times',
+    sourceUrl: 'https://www.ft.com',
   },
 ]
